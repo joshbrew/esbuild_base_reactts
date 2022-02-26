@@ -1,5 +1,13 @@
 # Minimal [esbuild](https://esbuild.github.io/getting-started/#your-first-bundle), [Nodejs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework), and [Python Quart](https://pgjones.gitlab.io/quart/) concurrent test env.  
 
+## Build & Run Development Server without Python Server
+
+`npm i` then `npm run startdev`
+
+Comment out any py_wss or py_client references in node_server/server.js if you want to exclude it altogether else it tries to connect to the python port 7000 (only works on https).
+
+## With Python Server
+
 Requires: Python 3.7 or later and NodeJS LTS or later
 
 This test runs a websocket and a thread on the [python](https://www.python.org/downloads/) quart server. You can access the Node-served test page at `http://localhost:8000` or the quart server test page at `http://localhost:7000` to experiment (add `/build` at port 7000 to access the node build (minus hot reload)). 
@@ -8,7 +16,7 @@ Quart enables fast asyncio server streams from python. Bonus thread-generated da
 
 `npm run pip` should install any missing python packages. See [README](https://github.com/moothyknight/esbuild_base_python/blob/master/python/README.md))
 
-`npm run dev` installs nodejs packages and runs both python and node servers concurrently (with hot reloading for FE with a persistent python streaming server backend).
+`npm run concurrent` runs both python and node servers concurrently (with hot reloading for FE with a persistent python streaming server backend).
 
 After installing dependencies, 
 
@@ -28,9 +36,7 @@ You can specify https and add an ssl certificate if you follow the instructions.
 
 ## Hot reloading (for dev)
 
-`npm run dev`
-
-then `npm run startdev` 
+`npm run startdev` 
 
 nodemon restarts the node server automatically when changes to included source files are detected.
 
