@@ -17,8 +17,8 @@ export class App extends Component {
 
 
 ReactDOM.render(
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>,
-    document.getElementById('react')
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>,
+  document.getElementById('react')
 );

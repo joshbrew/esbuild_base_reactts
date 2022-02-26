@@ -41,7 +41,7 @@
         "inlineSourceMap": true,
         "baseUrl": "./",
         "paths": {
-            //"@myalyce/common/*": ["./common/*"]
+            
         }
     },
     "exclude": [
