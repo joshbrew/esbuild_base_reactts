@@ -4,7 +4,7 @@
 
 `npm i` then `npm run startdev`
 
-Comment out any py_wss or py_client references in node_server/server.js if you want to exclude it altogether else it tries to connect to the python port 7000 (only works on https).
+Find node_server/server_settings.js for easy config for http/https (set socket protocol 'ws' to 'wss' for hosted https). https requires ssl (instructions included in node_server/ssl)
 
 ## With Python Server
 
@@ -23,6 +23,8 @@ After installing dependencies,
 ## Run Python and Node together: 
 
 `npm run concurrent`
+
+Comment out any py_wss or py_client references in node_server/server.js if you want to exclude it altogether else the node server tries to connect to the python port 7000 (only works on https).
 
 ## Otherwise
 
